@@ -1,0 +1,23 @@
+print(paste("Modelo B MMS"))
+
+M <- 2
+mu <- 3
+lambda <- 2
+n <- 0
+
+po <- 1/(1/factorial(n)+lambda/mu+(1/factorial(M))*((lambda/mu)^M)*(M*mu/(M*mu-lambda))) 
+print(paste("Probabilidad de", po, "de que haya 0 personas en el sistema"))
+
+Ls <- (lambda*mu*((lambda/mu)^M))/(factorial(M-1)*((M*mu-lambda)^2))*(po)+(lambda/mu)
+print(paste(Ls, "Número medio de automóviles en el sistema"))
+
+Ws <- (Ls/lambda)*60
+print(paste(Ws, "Minutos de tiempo medio que un automovil pasa en el sistema"))
+
+Lq <- Ls-(lambda/mu)
+print(paste(Lq, "número medio de automóviles en la cola"))
+
+Wq <- (Lq/lambda)*60
+print(paste(Wq, "minutos de tiempo medio que un automovil pasa en la cola es de"))
+
+print(paste("GRACIAS POR SU ATENCIÓN"))
